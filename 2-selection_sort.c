@@ -5,13 +5,15 @@
  * @array: arrary to be sorted
  * @size: size of the array to be sorted
  * Return: None
-*/
+ */
 
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j;
-	size_t minIndex;
+	size_t i, j, minIndex;
 	int tmp;
+
+	if (!array || !size)
+		return;
 
 	for (i = 0; i < size - 1; i++)
 	{
@@ -31,9 +33,5 @@ void selection_sort(int *array, size_t size)
 			array[minIndex] = tmp;
 			print_array(array, size);
 		}
-
-
 	}
-
-
 }
